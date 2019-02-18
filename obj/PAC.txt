@@ -1,0 +1,52 @@
+dmm.com | 203.209.152.96 
+203.209.144.0-255.255.240.0
+route 203.209.144.0 255.255.240.0 vpn_gateway
+
+dmm.co.jp | 124.147.10.210
+124.147.0.0-255.255.192.0
+route 124.147.0.0 255.255.192.0 vpn_gateway
+
+osapi.dmm.com | 202.6.247.183
+202.6.244.0-255.255.252.0
+route 202.6.244.0 255.255.252.0 vpn_gateway
+
+nicovideo.jp | 202.248.110.184
+202.240.0.0-255.240.0.0
+route 202.240.0.0 255.240.0.0 vpn_gateway
+
+pixiv.net | 210.129.120.46
+210.128.0.0-255.248.0.0
+route 210.128.0.0 255.248.0.0 vpn_gateway
+
+whatismyip.com | 104.27.193.92
+104.16.0.0-255.240.0.0
+route 104.16.0.0 255.240.0.0 vpn_gateway
+
+mora.jp | 54.192.234.133
+54.192.0.0-255.255.0.0
+route 54.84.0.0 255.252.0.0 vpn_gateway
+route 54.88.0.0 255.248.0.0 vpn_gateway
+route 54.192.0.0 255.255.0.0 vpn_gateway
+
+pb04.dmc.nico | 119.110.93.102
+119.110.88.0-255.255.248.0
+route 119.110.88.0 255.255.248.0 vpn_gateway
+
+=====================================
+
+dhcp-option DNS 8.8.8.8
+dhcp-option DNS 8.8.4.4
+dhcp-option DNS 208.67.222.220
+
+route-nopull
+route 0.0.0.0 0.0.0.0 net_gateway
+route 54.84.0.0 255.252.0.0 vpn_gateway
+route 54.88.0.0 255.248.0.0 vpn_gateway
+route 54.192.0.0 255.255.0.0 vpn_gateway
+route 104.16.0.0 255.240.0.0 vpn_gateway
+route 119.110.88.0 255.255.248.0 vpn_gateway
+route 124.147.0.0 255.255.192.0 vpn_gateway
+route 202.6.244.0 255.255.252.0 vpn_gateway
+route 202.240.0.0 255.240.0.0 vpn_gateway
+route 203.209.144.0 255.255.240.0 vpn_gateway
+route 210.128.0.0 255.248.0.0 vpn_gateway
