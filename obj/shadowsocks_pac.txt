@@ -1,10 +1,5 @@
-! Perosinal Proxy auto-config
-! dot JP only
-! Update 2019.02.18
-
-||dmm.com/*
-||dmm.co.jp/*
-||osapi.dmm.com/*
-||nicovideo.jp/*
-||mora.jp/*
-https://www.whatismyip.com/
+https://www.dmm.com/*
+https://osapi.dmm.com/*
+https://www.dmm.co.jp/*
+https://www.mora.jp/*
+https://www.whatismyip.com/*
