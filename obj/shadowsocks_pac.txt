@@ -1,5 +1,17 @@
 https://www.dmm.com/*
+https://www.dmm.com/*
+https://accounts.dmm.com/*
+https://api.dmm.com/*
+https://games.dmm.com/*
+https://mobile.dmm.com/*
+https://my.dmm.com/*
 https://osapi.dmm.com/*
+https://payment.dmm.com/*
 https://www.dmm.co.jp/*
+https://accounts.dmm.co.jp/*
+https://games.dmm.co.jp/*
+https://mobile.dmm.co.jp/*
+https://my.dmm.co.jp/*
+https://payment.dmm.co.jp/*
 https://www.mora.jp/*
 https://www.whatismyip.com/*
