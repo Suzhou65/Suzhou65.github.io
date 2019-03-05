@@ -17,6 +17,21 @@ var domains = {
     "my.dmm.co.jp": 1, 
     "payment.dmm.co.jp": 1, 
     "www.mora.jp": 1, 
+    "blog.mora.jp": 1, 
+    "design.mora.jp": 1, 
+    "develop.mora.jp": 1, 
+    "form.mora.jp": 1, 
+    "mep-preview.mora.jp": 1, 
+    "mng.mora.jp": 1, 
+    "moaimta.mora.jp": 1, 
+    "mora-cms.mora.jp": 1, 
+    "preview.mora.jp": 1, 
+    "ps3mta.mora.jp": 1, 
+    "stg.mora.jp": 1, 
+    "stg-gw.mora.jp": 1, 
+    "stg-ps3mta.mora.jp": 1, 
+    "test.mora.jp": 1, 
+    "ux.mora.jp": 1, 
     "www.whatismyip.com": 1
 };
 
