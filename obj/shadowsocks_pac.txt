@@ -1,13 +1,6 @@
 https://www.dmm.com/*
-https://www.dmm.com/*
 https://accounts.dmm.com/*
 https://api.dmm.com/*
-https://dis.gd/*
-https://discordapp.com/*
-https://discord.app/*
-https://discord.com/*
-https://discord.co/*
-https://discord.gg/*
 https://games.dmm.com/*
 https://mobile.dmm.com/*
 https://my.dmm.com/*

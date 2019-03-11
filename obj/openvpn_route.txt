@@ -1,50 +1,69 @@
-=====================================
+# More about .opvn client format, please visit GitHub below
+# openvpn/sample/sample-windows/sample.ovpn
+# ===============================================
+# OpenVPN using Netmask to set gateway
+# Copy the string text like below into your .opvn
+# route 192.168.65.195 255.255.252.0 vpn_gateway
+# ===============================================
 
-dmm.com | 203.209.152.96 
-203.209.144.0-255.255.240.0
-route 203.209.144.0 255.255.240.0 vpn_gateway
-
-dmm.co.jp | 124.147.10.210
-124.147.0.0-255.255.192.0
-route 124.147.0.0 255.255.192.0 vpn_gateway
-
-osapi.dmm.com | 202.6.247.183
-202.6.244.0-255.255.252.0
-route 202.6.244.0 255.255.252.0 vpn_gateway
-
-nicovideo.jp | 202.248.110.184
-202.240.0.0-255.240.0.0
-route 202.240.0.0 255.240.0.0 vpn_gateway
-
-pixiv.net | 210.129.120.46
-210.128.0.0-255.248.0.0
-route 210.128.0.0 255.248.0.0 vpn_gateway
-
-whatismyip.com | 104.27.193.92
-104.16.0.0-255.240.0.0
-route 104.16.0.0 255.240.0.0 vpn_gateway
-
-mora.jp | 54.192.234.133
-54.192.0.0-255.255.0.0
-route 54.84.0.0 255.252.0.0 vpn_gateway
-route 54.88.0.0 255.248.0.0 vpn_gateway
-route 54.192.0.0 255.255.0.0 vpn_gateway
-
-pb04.dmc.nico | 119.110.93.102
-119.110.88.0-255.255.248.0
-route 119.110.88.0 255.255.248.0 vpn_gateway
-
-=====================================
-
+# Below two string text is NECESSARY  gateway config
 route-nopull
 route 0.0.0.0 0.0.0.0 net_gateway
-route 54.84.0.0 255.252.0.0 vpn_gateway
-route 54.88.0.0 255.248.0.0 vpn_gateway
-route 54.192.0.0 255.255.0.0 vpn_gateway
+
+# ===============================================
+# Starting of gateway configuration
+
+# design.mora.jp | 13.112.96.240
+# payment.dmm.com | 13.112.108.254
+# payment.dmm.co.jp | 13.112.108.254
+route 13.112.0.0 255.252.0.0 vpn_gateway
+
+# test.mora.jp | 13.231.228.107
+route 13.230.0.0 255.254.0.0 vpn_gateway
+
+# games.dmm.com | 43.255.40.206
+# games.dmm.co.jp | 43.255.40.206
+route 43.255.40.0 255.255.252.0 vpn_gateway
+
+# accounts.dmm.com | 52.193.243.134
+# accounts.dmm.co.jp | 52.193.243.134
+# blog.mora.jp | 52.219.0.144
+# mng.mora.jp | 52.193.66.230
+# ux.mora.jp | 52.219.4.70
+route 52.192.0.0 255.254.0.0 vpn_gateway
+
+# www.mora.jp | 52.198.43.163
+# mora-cms.mora.jp | 52.199.127.70
+# stg-gw.mora.jp | 52.199.106.17
+route 52.196.0.0 255.252.0.0 vpn_gateway
+
+# develop.mora.jp | 54.249.26.68
+# mep-preview.mora.jp | 54.249.27.114
+# moaimta.mora.jp | 54.249.26.64
+# preview.mora.jp | 54.249.27.11
+# ps3mta.mora.jp | 54.249.249.52
+# stg-ps3mta.mora.jp | 54.249.241.171
+route 54.248.0.0 255.254.0.0 vpn_gateway
+
+# mobile.dmm.com | 99.84.170.229 
+# mobile.dmm.co.jp | 99.84.170.229
+# stg.mora.jp | 99.84.168.114
+route 99.83.64.0 255.248.0.0 vpn_gateway
+
+# www.whatismyip.com | 104.27.193.92
 route 104.16.0.0 255.240.0.0 vpn_gateway
-route 119.110.88.0 255.255.248.0 vpn_gateway
-route 124.147.0.0 255.255.192.0 vpn_gateway
+
+# form.mora.jp | 165.100.253.38
+route 165.100.208.0 255.255.192.0 vpn_gateway
+
+# www.dmm.co.jp | 157.112.85.173
+# www.dmm.com | 157.112.85.174
+route 157.112.80.0 255.255.240.0 vpn_gateway
+
+# api.dmm.com | 202.6.245.194
+# osapi.dmm.com | 202.6.247.183
 route 202.6.244.0 255.255.252.0 vpn_gateway
-route 202.240.0.0 255.240.0.0 vpn_gateway
+
+# my.dmm.com | 203.209.147.38
+# my.dmm.co.jp | 203.209.147.148
 route 203.209.144.0 255.255.240.0 vpn_gateway
-route 210.128.0.0 255.248.0.0 vpn_gateway
