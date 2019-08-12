@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<gpx xmlns="http://www.topografix.com/GPX/1/1" creator=" Wikipedia GPS_Exchange_Format" version="1.1" >
+  <metadata>
+  <trk>
+      <name>Example GPX Document</name>
+      <trkseg>
+          <trkpt lat="11.45141919" lon="11.45141919">
+          </trkpt>
+    </trkseg>
+  </trk>
+</gpx>
