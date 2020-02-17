@@ -29,3 +29,5 @@ http://stg-ps3mta.mora.jp/*
 https://test.mora.jp/*
 http://ux.mora.jp/*
 https://www.whatismyip.com/*
+https://exhentai.org/*
+https://e-hentai.org/*
