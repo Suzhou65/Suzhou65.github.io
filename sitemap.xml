@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+<url>
+  <loc>https://github.takahashi65.info/</loc>
+  <lastmod>2020-03-08T13:28:07+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://github.takahashi65.info/lib_circuit/</loc>
+  <lastmod>2020-03-02T15:57:51+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://github.takahashi65.info/lib_list/</loc>
+  <lastmod>2020-03-02T15:57:52+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://github.takahashi65.info/lib_list/blacklist.txt</loc>
+  <lastmod>2020-03-02T15:57:52+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://github.takahashi65.info/lib_circuit/BOM_Arduino_play_pokemon.pdf</loc>
+  <lastmod>2020-03-02T15:57:51+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://github.takahashi65.info/lib_circuit/BOM_LM317T.pdf</loc>
+  <lastmod>2020-03-02T15:57:51+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://github.takahashi65.info/lib_circuit/BOM_NE555.pdf</loc>
+  <lastmod>2020-03-02T15:57:51+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://github.takahashi65.info/lib_circuit/BOM_SkyLift.pdf</loc>
+  <lastmod>2020-03-02T15:57:51+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://github.takahashi65.info/lib_list/openvpn_route.txt</loc>
+  <lastmod>2020-03-02T15:57:52+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://github.takahashi65.info/lib_list/shadowsocks_pac.txt</loc>
+  <lastmod>2020-03-02T15:57:52+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+
+</urlset>
