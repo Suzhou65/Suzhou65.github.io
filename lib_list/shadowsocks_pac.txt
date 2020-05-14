@@ -30,3 +30,4 @@ https://test.mora.jp/*
 https://ux.mora.jp/*
 https://www.whatismyip.com/*
 https://*.mora.jp/*
+https://*.contents.fc2.com/*
