@@ -32,3 +32,5 @@ https://www.whatismyip.com/*
 https://*.mora.jp/*
 https://*.contents.fc2.com/secure/*
 https://*.fc2.com/up/*
+https://pbs.twimg.com/media/*
+https://video.twimg.com/*
