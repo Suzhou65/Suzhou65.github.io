@@ -1,7 +1,6 @@
 ! Version: 0.0.7
 ! TimeUpdated: 2020-07-16T09:22:36+08:00
 ! Homepage: https://github.takahashi65.info/lib_list/
-!
 https://www.dmm.com/*
 https://accounts.dmm.com/*
 https://api.dmm.com/*
