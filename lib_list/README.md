@@ -6,6 +6,9 @@ Customized For Japan Website Which Has IP Address Blocking
 For Browser extension (Chrome/FireFox)
 
 ## File Descriptions
+**blocklist_Ad.txt**  
+Content farm blocklist for AdBlocker/AdGuard
+
 **blocklist.csv**  
 Cache for editor
 
