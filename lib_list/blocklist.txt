@@ -1,7 +1,6 @@
 // Version: 0.0.5
 // TimeUpdated: 2020-07-16T09:38:28+08:00
 // Homepage: https://github.takahashi65.info/lib_list/
-// Rule
 0101.tw
 10000.tw
 100ke.info
