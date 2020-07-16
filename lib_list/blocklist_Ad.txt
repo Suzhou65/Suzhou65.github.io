@@ -1,6 +1,6 @@
 ! Title: Content Farm Blocklist
-! Version: 0.0.6
-! TimeUpdated: 2020-07-16T13:10:28+08:00
+! Version: 0.0.7
+! TimeUpdated: 2020-07-16T13:25:39+08:00
 ! Homepage: https://github.takahashi65.info/lib_list/
 ||0101.tw^
 ||10000.tw^
@@ -2093,6 +2093,7 @@
 ||goodwimitchbq.pixnet.net^
 ||goody25.com^
 ||googlechrome2017download.com^
+||google.com.tw/amp/s/kknews.cc/^
 ||gooread.com^
 ||gopthedailydose.com^
 ||gordonnews.com^
