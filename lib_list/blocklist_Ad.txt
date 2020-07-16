@@ -2093,6 +2093,7 @@
 ||goodwimitchbq.pixnet.net^
 ||goody25.com^
 ||googlechrome2017download.com^
+||google.com.tw/amp/s/kknews.cc^
 ||gooread.com^
 ||gopthedailydose.com^
 ||gordonnews.com^
@@ -6413,7 +6414,6 @@
 ||wwjok27192.pixnet.net^
 ||wwn83px11z.blog.fc2.com^
 ||www.chinatimes.com^
-||www.google.com.tw/amp/s/kknews.cc^
 ||www9.gocar2.com^
 ||wwwwtrolly88.com^
 ||wwyo84ky.wordpress.com^
