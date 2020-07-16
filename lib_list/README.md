@@ -12,8 +12,11 @@ Cache for editor
 **blocklist.txt**  
 Content farm blocklist
 
+**index.html**  
+GitHub Pages
+
 **openvpn_route.txt**  
 OpenVPN Routing File
 
-**shadowsocks_pac.txt**
+**shadowsocks_pac.txt**  
 Shadowsocks Proxy Auto-Config File
