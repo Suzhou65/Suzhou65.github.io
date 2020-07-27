@@ -1,5 +1,5 @@
-// Version: 0.0.5
-// TimeUpdated: 2020-07-16T09:38:28+08:00
+// Version: 0.0.6
+// TimeUpdated: 2020-07-27T13:51+08:00
 // Homepage: https://github.takahashi65.info/lib_list/
 0101.tw
 10000.tw
@@ -3730,7 +3730,6 @@ moneymy.cc
 monoc19027.pixnet.net
 moonofalabama.org
 mop.com
-moptt.tw
 moralesbusyyp.pixnet.net
 morenogoodcun.pixnet.net
 moretify.com
@@ -4444,7 +4443,6 @@ petkingdom.club
 petnews.tw
 petonea.com
 petpetbase.com
-pets.ettoday.net
 pew28mo04l.blog.fc2.com
 pfp93pb33f.pixnet.net
 pfv71bn53h.blog.fc2.com
@@ -5327,7 +5325,6 @@ stneotscitizen.com
 stonejoeloo6x.pixnet.net
 stoneneilke.pixnet.net
 stormcloudsgathering.com
-storm-mg.com
 story.bazzfly.com
 story543.com
 storywall.me
@@ -6412,7 +6409,6 @@ ww.share001.org
 wwjok27192.pixnet.net
 wwn83px11z.blog.fc2.com
 www.chinatimes.com
-www.storm.mg
 www9.gocar2.com
 wwwwtrolly88.com
 wwyo84ky.wordpress.com
