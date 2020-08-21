@@ -189,9 +189,22 @@ After saving the configuration file, start (or restart) apcupsd service.
 ```shell
 sudo service apache2 start
 ```
-or
 ```shell
 sudo service apache2 reload
 ```
+Now you can check the CGI monitor
+```html
+http://your.server.ipaddress/apcupsd/
+```
 
-## Working Environments
+## Tips
+If you have multi-APC UPSes which can broadcasting data, then you can choice multimon function into index as default.
+
+Please modify the section below
+```apacheconf
+DirectoryIndex upsstats.cgi
+```
+into
+```apacheconf
+DirectoryIndex multimon.cgi
+```
