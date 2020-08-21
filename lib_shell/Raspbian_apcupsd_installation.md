@@ -196,6 +196,7 @@ Now you can check the CGI monitor
 ```html
 http://your.server.ipaddress/apcupsd/
 ```
+![ScreenShot](https://github.takahashi65.info/lib_img/github_apc_upsstats.png) 
 
 ## Tips
 If you have multi-APC UPSes which can broadcasting data, then you can choice multimon function into index as default.
@@ -207,4 +208,15 @@ DirectoryIndex upsstats.cgi
 into
 ```apacheconf
 DirectoryIndex multimon.cgi
+```
+
+The multimon.cgi will be like this
+![ScreenShot](https://github.takahashi65.info/lib_img/github_apc_multimon.png)  
+
+You can also modify the apache default index page, let you easier to access different function.
+![ScreenShot](https://github.takahashi65.info/lib_img/github_raspbian_apache.png)  
+
+If apache server default folder (/var/www/html) show Permission denied alert, using the command below
+```shell
+sudo chown -R $USER:$USER /var/www
 ```
