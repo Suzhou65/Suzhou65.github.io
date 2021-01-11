@@ -1,13 +1,10 @@
 
 ## File Descriptions
-**blocklist_Ad.txt**  
+**blocklist.txt**  
 Content farm blocklist for AdBlocker/AdGuard
 
 **blocklist.csv**  
 Cache for editor
-
-**blocklist.txt**  
-Content farm blocklist
 
 **index.html**  
 GitHub Pages
