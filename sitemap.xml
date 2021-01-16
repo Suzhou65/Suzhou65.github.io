@@ -4,41 +4,44 @@
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
 
 <url>
   <loc>https://github.takahashi65.info/</loc>
-  <lastmod>2020-08-27T09:59:51+00:00</lastmod>
+  <lastmod>2021-01-15T07:06:34+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
   <loc>https://github.takahashi65.info/lib_list/</loc>
-  <lastmod>2020-08-27T09:59:51+00:00</lastmod>
+  <lastmod>2021-01-15T07:06:34+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://github.takahashi65.info/lib_circuit/</loc>
-  <lastmod>2020-08-27T09:59:51+00:00</lastmod>
+  <lastmod>2021-01-15T07:06:34+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://github.takahashi65.info/lib_circuit/BOM_Arduino_play_pokemon.pdf</loc>
-  <lastmod>2020-08-27T09:59:51+00:00</lastmod>
+  <lastmod>2021-01-15T07:06:34+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://github.takahashi65.info/lib_circuit/BOM_LM317T.pdf</loc>
-  <lastmod>2020-08-27T09:59:51+00:00</lastmod>
+  <lastmod>2021-01-15T07:06:34+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://github.takahashi65.info/lib_circuit/BOM_NE555.pdf</loc>
-  <lastmod>2020-08-27T09:59:51+00:00</lastmod>
+  <lastmod>2021-01-15T07:06:34+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://github.takahashi65.info/lib_circuit/BOM_SkyLift.pdf</loc>
-  <lastmod>2020-08-27T09:59:51+00:00</lastmod>
+  <lastmod>2021-01-15T07:06:34+00:00</lastmod>
   <priority>0.64</priority>
 </url>
+
 
 </urlset>
