@@ -1,5 +1,5 @@
-! Version: 0.0.7
-! TimeUpdated: 2020-07-16T09:22:36+08:00
+! Version: 0.0.8
+! TimeUpdated: 2021-02-01T21:06:44+08:00
 ! Homepage: https://github.takahashi65.info/lib_list/
 https://www.dmm.com/*
 https://accounts.dmm.com/*
@@ -15,25 +15,8 @@ https://games.dmm.co.jp/*
 https://mobile.dmm.co.jp/*
 https://my.dmm.co.jp/*
 https://payment.dmm.co.jp/*
-https://www.mora.jp/*
-https://blog.mora.jp/*
-https://design.mora.jp/*
-https://develop.mora.jp/*
-https://form.mora.jp/*
-https://mep-preview.mora.jp/*
-https://mng.mora.jp/*
-http://moaimta.mora.jp/*
-https://mora-cms.mora.jp/*
-https://preview.mora.jp/*
-https://ps3mta.mora.jp/*
-https://stg.mora.jp/*
-https://stg-gw.mora.jp/*
-https://stg-ps3mta.mora.jp/*
-https://test.mora.jp/*
-https://ux.mora.jp/*
-https://www.whatismyip.com/*
 https://*.mora.jp/*
-https://*.contents.fc2.com/secure/*
 https://*.fc2.com/up/*
-https://pbs.twimg.com/media/*
-https://video.twimg.com/*
+https://contents.fc2.com/dl/*
+https://*.contents.fc2.com/secure/*
+https://www.whatismyip.com/*
