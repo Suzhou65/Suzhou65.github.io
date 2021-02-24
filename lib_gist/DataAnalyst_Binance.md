@@ -1,7 +1,7 @@
 
 ## Processing Binance Trade History
 
-## Read Data
+### Read Data
 ```python
 #Import pandas
 import pandas
