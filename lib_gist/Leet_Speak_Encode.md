@@ -1,34 +1,43 @@
+## Leet interpreter
 
-## Processing GNP Ranking
-
-### Read Data
+### Reading 1337 dictionary, setting interpreter
 ```python
-#Import pandas
-import pandas
-
-#Reading Trade Data
-gnp_global = pandas.read_csv("GNP.csv", index_col=0)
-gnp_global.drop_duplicates("Country")
-gnp_global.drop(["2018","2017","2016","2015","2014"], axis=1, inplace=True)
-
-#Check
-gnp_global.head()
+import json
+def leek_translation(string):
+    #Reading leet dictionary
+    try:
+        with open("leet.json", "r") as leet_dictionary:
+            leet_book = json.load(leet_dictionary)
+    #If file not found
+    except FileNotFoundError:
+        print("leet dictionary not found !")
+    #Split string
+    temporarily = []
+    temporarily[:] = string
+    #Encode
+    try:
+        for index, data in enumerate(temporarily):
+            for key, value in leet_book.items():
+                if key in data:
+                    temporarily[index]=data.replace(key, leet_book[key])
+        #Join again
+        result_string = "".join(temporarily)
+        return result_string
+    except Exception:
+        return None
 ```
 
-### Setting Filter
+### Using it
 ```python
-global_filter = pandas.read_csv("filter.csv")
-global_filter.drop_duplicates("Country")
+string = input("Enter Raw String: ")
+output = leek_translation(string)
 
-#Check
-global_filter.head()
+#Result
+print(f"{string} | {output}")
 ```
 
-### Filter and Save to file
+### List mode
 ```python
-#Filter
-result = gnp_global[gnp_global["Country"].isin(global_filter["Country"]) == True]
-
-#Save
-result.to_csv("ranking.csv", encoding="utf_8_sig")
-``` 
+for string in string_list:
+    print(leek_translation(string))
+```
