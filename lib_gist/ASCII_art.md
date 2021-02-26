@@ -37,5 +37,5 @@ print("                   .d888b.  Y88b.      Y        `Y88888")
 print("                                                  `Y88K")
 print("                                                    `Y8")
 print("                                                      '")
-print("God's in His Heaven, All's Right With the World")
+print("    God's in His Heaven, All's Right With the World")
 ```
