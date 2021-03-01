@@ -26,10 +26,11 @@ def read_logfile(input_filename):
         output_filename = input_filename.replace("txt","csv").replace("_audit","").replace("_ht","")
         
         #Save
-        #Using 'utf_8_sig' if you want to using Excel import data a text file function
+        #Using 'utf_8_sig' if you want to using Excel import data from a text file function.
         log_file.to_csv(output_filename, encoding="utf_8_sig", index=False)
         
         return True
+    #Error handling 
     except FileNotFoundError:
         print([input_filename, "SKip"])
     except Exception as error:
