@@ -1,5 +1,4 @@
-
-## GitHub Badge
+# GitHub Badge
 Generate by using [shields.io](https://shields.io/#your-badge)
 
 ## Resources
