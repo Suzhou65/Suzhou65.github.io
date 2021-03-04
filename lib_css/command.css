@@ -1,0 +1,42 @@
+/* Copy from Antoine Neff, @antoineneff */
+/* Thanks */
+
+/* Src - https://codepen.io/antoineneff/pen/OMegNx */
+
+body {
+    min-width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #eee;
+}
+.console {
+    font-family: 'Fira Mono';
+    width: 960px;
+    height: 450px;
+    box-sizing: border-box;
+    margin: auto;
+}
+.console header {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    background-color: #555;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    color: #DDD;
+}
+.console .consolebody {
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    box-sizing: border-box;
+    padding: 20px;
+    height: calc(100% - 40px);
+    overflow: scroll;
+    background-color: #000;
+    color: #63de00;
+}
+.console .consolebody p {
+    line-height: 1.5rem;
+}

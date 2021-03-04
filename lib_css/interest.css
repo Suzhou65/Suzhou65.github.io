@@ -1,0 +1,54 @@
+/* interest.html */
+@media all{
+    html{background:#323B44; font-family:sans-serif; color:#9AADC4; font-size:100%;}
+    div.banner{margin:0 auto; text-align:center; font-size:1rem; color:#9AADC4; font-weight:bold; padding:1rem;}
+    div.description{text-align:right; color:#259C8E;}
+    div.modified_time{margin:0px auto; text-align:center; font-size:0.8rem; color:#FE961D; font-weight:bold; padding:0.917rem;}
+    div.footer{margin:0 auto; text-align:center; font-size:0.8rem; font-weight:bold; padding:0.5rem}
+        div.footer a{text-decoration:none; color:#9AADC4;}
+    /* Form */
+    form.fmirate{margin:0 auto;}
+    /* Table*/
+    div.calculator{margin:0 auto; max-width:85%;}
+    /* Input Action*/
+    input:focus{outline:none;}
+    table.calculator_structure{margin: 0 auto; border:0.063rem solid #323B44;}
+        tr{height:3rem; padding:0.25rem;}
+        td{padding:0.25rem;}
+        /*R1*/
+        tr:nth-child(1)
+            td:nth-child(1){text-align:center; color:#FE961D;}
+        tr:nth-child(1)
+            td:nth-child(2){text-align:center; color:#3E9CBF;}
+        tr:nth-child(1)
+            td:nth-child(3){text-align:center; color:#48C3B6;}
+        tr:nth-child(1)
+            td:nth-child(4){text-align:center; color:#48C3B6;}
+        /*R2*/
+        tr:nth-child(2){text-align:center;}
+        tr:nth-child(2)
+            td{padding:0.3rem; border:0.0125rem solid #9AADC4; border-radius:0.313rem;}
+        tr:nth-child(2)
+            input[name="btsave"]{border:0; background-color:#323B44; color:#9AADC4;}
+        tr:nth-child(2)
+            input[name="btperiod"]{border:0; background-color:#323B44; color:#9AADC4;}
+        tr:nth-child(2)
+            input[name="btrate"]{border:0; background-color:#323B44; color:#9AADC4;}
+        tr:nth-child(2)
+            input[name="bttotal"]{border:0; background-color:#323B44; color:#259C8E;}
+        /*R3*/
+        tr:nth-child(3)
+            td:nth-child(1){text-align:center; color:#FE961D;}
+        tr:nth-child(3)
+            td:nth-child(2){text-align:center; color:#3E9CBF;}
+        tr:nth-child(3)
+            td:nth-child(4){text-align:left; color:#48C3B6;}
+        /* Input */
+    input[name="fdsave"]{background-color:#9AADC4; border:0; text-align:center; color:#222222;}
+    input[name="fdmonth"]{background-color:#9AADC4; border:0; text-align:center; max-width:3rem; color:#222222;}
+    input[name="fdrate"]{background-color:#9AADC4; border:0; text-align:center; max-width:3rem; color:#222222;}
+    input[name="fdtotal"]{background-color:#9AADC4; border:0; text-align:center; color:#222222;}
+    /* Display */
+    input[name="fdtotalbase"]{background-color:#9AADC4; border:0; text-align:center; color:#444444;}
+    input[name="fdtotalinter"]{background-color:#9AADC4; border:0; text-align:center; color:#444444;}
+}
