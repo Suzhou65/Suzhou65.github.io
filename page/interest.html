@@ -126,49 +126,42 @@
 			</div>
 			<div class="calculator">
 				<table class="calculator_structure">
-					<tr><!-- Row1 -->
-						<td>
-							Deposit &nbsp; <input type="text" name="fdsave" size="15">
-						</td>
-						<td>
-							Periods Number&nbsp;<input type="text" name="fdmonth" size="5">
-						</td>
-						<td>
-							Interest Rate(％) &nbsp;<input type="text" name="fdrate" size="5">
-						</td>
-						<td>
-							Accumulated Amount&nbsp; <input type="text" name="fdtotal" size="15">
-						</td>
+					<tr>
+						<!-- Row1 -->
+						<td>Deposit</td>
+						<td>Periods Number</td>
+						<td>Interest Rate (％)</td>
+						<td>Accumulated Amount</td>
 					</tr>
-					<tr><!-- Row2 -->
-						<td>
-							&nbsp; <input type="submit" value="Deposit Calculate" name="btsave" onclick="calsave(); return false" autocomplete="off">
-						</td>
-						<td>
-							&nbsp; <input type="submit" value="Periods Calculate" name="btperiod" onclick="calperiod(); return false" autocomplete="off">
-						</td>
-						<td>
-							&nbsp; <input type="submit" value="Interest Rate Calculate" name="btrate" onclick="calrate(); return false" autocomplete="off">
-						</td>
-						<td>
-							&nbsp; <input type="submit" value="Accumulated Amount Calculate" name="bttotal" onclick="caltotal(); return false" autocomplete="off">
-						</td>
+					<tr>
+						<!-- Row2 -->
+						<td>&nbsp; <input type="text" name="fdsave"></td>
+						<td>&nbsp;<input type="text" name="fdmonth" size="10"></td>
+						<td>&nbsp;<input type="text" name="fdrate" size="10"></td>
+						<td>&nbsp;<input type="text" name="fdtotal"></td>
 					</tr>
-					<tr><!-- Row3 -->
-						<td>
-							Principal &nbsp; <input type="text" name="fdtotalbase" disabled size="15">
-						</td>
-						<td>
-							Interest &nbsp; <input type="text" name="fdtotalinter" disabled size="15">
-						</td>
+					<tr>
+						<!-- Row3 -->
+						<td>&nbsp; <input type="submit" value="Deposit Calculate" name="btsave" onclick="calsave(); return false" autocomplete="off"></td>
+						<td>&nbsp; <input type="submit" value="Periods Calculate" name="btperiod" onclick="calperiod(); return false" autocomplete="off"></td>
+						<td>&nbsp; <input type="submit" value="Interest Rate Calculate" name="btrate" onclick="calrate(); return false" autocomplete="off"></td>
+						<td>&nbsp; <input type="submit" value="Accumulated Amount Calculate" name="bttotal" onclick="caltotal(); return false" autocomplete="off"></td>
+					</tr>
+					<tr>
+						<!-- Row4 -->
+						<td>Principal</td>
+						<td>Interest</td>
 						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<!-- Row5 -->
+						<td>&nbsp; <input type="text" name="fdtotalbase" disabled></td>
+						<td>&nbsp; <input type="text" name="fdtotalinter" disabled></td>
 						<td>Input at least 3 value</td>
+						<td>Last Modified | 2021.03.05</td>
 					</tr>
 				</table>
-			</div>
-			<!-- modified -->
-			<div class="modified_time">
-				Last Modified Date | 2018.04.08
 			</div>
 			<!-- footer -->
 			<div class="footer">
