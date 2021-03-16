@@ -1,6 +1,6 @@
 # Is Apple silicon ready for me?
-Only tick if fully compatible with Apple silicon.
 
+## Fully compatible with Apple silicon.
 ### Chat
 - [ ] LINE
 - [ ] Microsoft Skype
@@ -36,3 +36,25 @@ Only tick if fully compatible with Apple silicon.
 - [ ] AdGuard
 - [ ] OpenVPN Connect
 - [x] Viscosity
+
+## Works with Rosetta 2 translation
+### Chat
+- [x] LINE
+- [x] Microsoft Skype
+
+### Design
+- [x] Adobe Illustrator
+
+### Develop
+- [ ] Filezilla
+- [x] GitHub Desktop
+- [x] KiCad EDA
+- [ ] Zotero
+
+### Office
+- [x] Adobe Acrobat
+- [x] Dropbox
+
+### Tools
+- [x] AdGuard
+- [ ] OpenVPN Connect
