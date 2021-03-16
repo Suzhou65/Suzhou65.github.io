@@ -21,6 +21,7 @@ Only tick if fully compatible with Apple silicon.
 - [ ] KiCad EDA
 - [x] Microsoft Visual Studio Code
 - [x] TeamViewer
+- [ ] Zotero
 
 ### Office
 - [ ] Adobe Acrobat
