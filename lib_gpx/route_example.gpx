@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx xmlns="http://www.topografix.com/GPX/1/1" creator="Suzhou65.github.io">
+    <trk>
+        <name>Example GPX Document</name>
+        <trkseg>
+            <trkpt lat="11.45141919" lon="11.45141919">
+            </trkpt>
+        </trkseg>
+    </trk>
+</gpx>
