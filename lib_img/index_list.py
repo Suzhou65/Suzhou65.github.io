@@ -5,16 +5,16 @@ import csv
 import subprocess
 
 # Ask list
-list_input = subprocess.Popen(["ls", "-ls"], stdout=subprocess.PIPE)
+asking_list = subprocess.Popen(["ls", "-ls"], stdout=subprocess.PIPE)
 # AWK filter
 awk_filter = ["awk", "{print $10}"]
-result_output = subprocess.Popen(awk_filter, stdin=list_input.stdout, stdout=subprocess.PIPE)
-# Into bytes
-result_bytes = result_output.communicate()[0]
+filter_output = subprocess.Popen(awk_filter, stdin=asking_list.stdout, stdout=subprocess.PIPE)
+# Dump into Cache
+result_bytes = filter_output.communicate()[0]
 # Decode
-result_decode = result_bytes.decode("utf-8")
+result_utf8 = result_bytes.decode("utf-8")
 # List
-result_split = result_decode.split("\n")
+result_split = result_utf8.split("\n")
 del result_split[0]
 del result_split[-1]
 
