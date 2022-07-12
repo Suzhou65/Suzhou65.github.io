@@ -4,8 +4,10 @@ github_apcupsd_voltage_recorder_raspbian_apache_cgi.webp
 github_apcupsd_voltage_recorder_upsfstats.webp
 github_apcupsd_voltage_recorder_upsstats.webp
 github_arduino2pokemon_breakoutboard_front.webp
+github_arduino2pokemon_breakoutboard_prepare.webp
 github_arduino2pokemon_breakoutboard_rear.webp
 github_arduino2pokemon_breakoutboard_schematic.webp
+github_arduino2pokemon_breakoutboard_soldering.webp
 github_arduino2pokemon_concept_assembly.webp
 github_arduino2pokemon_concept_breadboard.webp
 github_arduino2pokemon_concept_case.webp
@@ -66,9 +68,11 @@ github_pixmicat_div_bottom.webp
 github_pixmicat_div_main.webp
 github_pixmicat_div_top.webp
 github_plurk_hacker_icon.webp
+github_pokemon_go_alignment.webp
 github_pokemon_go_battery.webp
 github_pokemon_go_case_cut.webp
 github_pokemon_go_compare.webp
+github_pokemon_go_desoldering.webp
 github_pokemon_go_edge.webp
 github_pokemon_go_led_pin_origin.webp
 github_pokemon_go_led_pin_piracy.webp
@@ -77,6 +81,7 @@ github_pokemon_go_modify_pinout.webp
 github_pokemon_go_pcb.webp
 github_pokemon_go_pin_test.webp
 github_pokemon_go_reassembly.webp
+github_pokemon_go_tape.webp
 github_pokemon_go_teardown_vob.webp
 github_pokemon_go_teardwon.webp
 github_pokemon_go_wiring.webp
