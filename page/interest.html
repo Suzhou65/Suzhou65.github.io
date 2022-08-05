@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-J9FB34KMVR"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'G-J9FB34KMVR');
+        </script>
+        <!-- META -->
+        <meta http-equiv="Content-Type" content="text/html" charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="Cache-Control" content="max-age=86400"/>
+		<link rel="stylesheet" href="https://github.takahashi65.info/lib_css/interest.css">
+        <!-- Favicon -->
+        <link rel="icon" type="image/png" href="https://github.takahashi65.info/favicon.png" sizes="256x256" />
+        <link rel="mask-icon" type="image/svg" href="https://github.takahashi65.info/favicon.svg" color="#000000" />
+        <link rel="alternate icon" type="image/x-icon" href="https://github.takahashi65.info/favicon.ico" sizes="256x256" />
+        <link rel="apple-touch-icon" type="image/png" href="https://github.takahashi65.info/apple-touch-icon.png" sizes="180x180" />
+        <!-- Title -->
+        <title>Interest Calculator</title>
+        <!-- Script -->
+        <script language="JavaScript" src="https://github.takahashi65.info/lib_js/interest_1.js"></script>
+		<script language="JavaScript" src="https://github.takahashi65.info/lib_js/interest_2.js"></script>
+		<script language="JavaScript" src="https://github.takahashi65.info/lib_js/interest_4.js"></script>
+        <!-- Script -->
+		<script language="JavaScript">
+			var pd= 1;
+			function sintpayy(m, r, x) {
+				var y, p;
+				p= r*0.01/pd;
+				if(!p) y= x;
+				else
+				y= x* Math.pow(p+1,m);
+				return y;
+			}
+			function sintpayx(m, r, y) {
+				var x, p, q;
+				p= r*0.01/pd;
+				if(!p) x= y;
+				else
+				x= y/ Math.pow(p+1,m);
+				return x;
+			}
+			function sintpaym(r, x, y) {
+				var m, p;
+				p= r*0.01/pd;
+				if(!p) m= 0;
+				else
+				m= Math.log(y/x)/ Math.log(p+1);
+				return m;
+			}
+			function sintpayr(m, x, y) {
+				var r, r1, r2, rd, rerr, y2;
+				rerr= 0.000001;
+				rd= 100;
+				for(r1=0;;r1-=rd) { y2= sintpayy(m, r1, x); if(y2<= y) break; }
+				for(r2=r1+rd;;r2+=rd) { y2= sintpayy(m, r2, x); if(y2>= y) break; }
+				for(;;) {
+					r= (r1+r2)/2;
+					y2= sintpayy(m, r, x);
+					if(y2<y) r1= r; else r2= r;
+					if(Math.abs(r2-r1)< rerr) break;
+				}
+				return r;
+			}
+			function fmv(n) {
+				if(n== "fdyear") return 0;
+				return jvsparseFloat(document.fmirate[n].value);
+			}
+			function calbase() {
+				document.fmirate.fdtotalbase.value= Math.round(fmv("fdsave")*10)/10;
+				document.fmirate.fdtotalinter.value= Math.round((fmv("fdtotal")-fmv("fdtotalbase"))*10)/10;
+			}
+			function calperiod() {
+				var y, m;
+				m= sintpaym(fmv("fdrate"), fmv("fdsave"), fmv("fdtotal"));
+				m= Math.round(m*100)/100;
+				
+				//	if(m>=pd) y= Math.floor(m/pd), m%= pd, m= Math.round(m*100)/100;
+				//	else
+				//		y= 0;
+				//	document.fmirate.fdyear.value= y;
+				document.fmirate.fdmonth.value= m;
+				calbase();
+			}
+			function calrate() {
+				var r;
+				r= sintpayr(fmv("fdyear")*pd+ fmv("fdmonth"), fmv("fdsave"), fmv("fdtotal"));
+				r= Math.round(r*10000)/10000;
+				document.fmirate.fdrate.value= r;
+				calbase();
+			}
+			function calsave() {
+				var x;
+				x= sintpayx(fmv("fdyear")*pd+ fmv("fdmonth"), fmv("fdrate"), fmv("fdtotal"));
+				x= Math.round(x*10)/10;
+				document.fmirate.fdsave.value= x;
+				calbase();
+			}
+			function caltotal() {
+				var y;
+				y= sintpayy(fmv("fdyear")*pd+ fmv("fdmonth"), fmv("fdrate"), fmv("fdsave"));
+				y= Math.round(y*100/100);
+				document.fmirate.fdtotal.value= y;
+				calbase();
+			}
+			var icounter= new Image();
+			function main() {
+				rtit= jvsparseInt(docsubcookie("hr", "rtit"));
+				keepcounter= rtit;
+				if(!rtit) rtit= 1;
+				docsubcookie("hr", "rtit", rtit);
+				loadcounter();
+			}
+		</script>
+	</head>
+	<body>
+		<form method="GET" name="fmirate">
+			<!--Main Frame start-->
+			<div class="banner">
+				Compound Interest Calculator
+			</div>
+			<div class="calculator">
+				<table class="calculator_structure">
+					<tr>
+						<!-- Row1 -->
+						<td>Deposit</td>
+						<td>Periods Number</td>
+						<td>Interest Rate (％)</td>
+						<td>Accumulated Amount</td>
+					</tr>
+					<tr>
+						<!-- Row2 -->
+						<td>&nbsp; <input type="text" name="fdsave"></td>
+						<td>&nbsp;<input type="text" name="fdmonth" size="10"></td>
+						<td>&nbsp;<input type="text" name="fdrate"></td>
+						<td>&nbsp;<input type="text" name="fdtotal"></td>
+					</tr>
+					<tr>
+						<!-- Row3 -->
+						<td>&nbsp; <input type="submit" value="Deposit Calculate" name="btsave" onclick="calsave(); return false" autocomplete="off"></td>
+						<td>&nbsp; <input type="submit" value="Periods Calculate" name="btperiod" onclick="calperiod(); return false" autocomplete="off"></td>
+						<td>&nbsp; <input type="submit" value="Interest Rate Calculate" name="btrate" onclick="calrate(); return false" autocomplete="off"></td>
+						<td>&nbsp; <input type="submit" value="Accumulated Amount Calculate" name="bttotal" onclick="caltotal(); return false" autocomplete="off"></td>
+					</tr>
+					<tr>
+						<!-- Row4 -->
+						<td>Principal</td>
+						<td>Interest</td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<!-- Row5 -->
+						<td>&nbsp; <input type="text" name="fdtotalbase" disabled></td>
+						<td>&nbsp; <input type="text" name="fdtotalinter" disabled></td>
+						<td>Input at least 3 value</td>
+						<td>Last Modified | 2021.03.05</td>
+					</tr>
+				</table>
+			</div>
+			<!-- footer -->
+			<div class="footer">
+				<a href="javascript:history.back()">Previous Pages</a>
+			</div>
+		</form>
+	</body>
+</html>
