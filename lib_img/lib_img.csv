@@ -1,4 +1,3 @@
-README.md
 github_apcupsd_voltage_recorder_multimon.webp
 github_apcupsd_voltage_recorder_raspbian_apache_cgi.webp
 github_apcupsd_voltage_recorder_upsfstats.webp
@@ -49,6 +48,9 @@ github_gerber_nixie_adapter_front.webp
 github_gerber_nixie_adapter_rear.webp
 github_gerber_skylift_front.webp
 github_gerber_skylift_rear.webp
+github_gerber_temp2pwm_front.webp
+github_gerber_temp2pwm_rear.webp
+github_gerber_temp2pwm_schematic.webp
 github_gerber_thermalsensor_front.webp
 github_gerber_thermalsensor_rear.webp
 github_gerber_thermalsensor_schematic.webp
@@ -97,6 +99,3 @@ github_template_iphone10_home.webp
 github_template_iphone5s.webp
 github_template_iphone6.webp
 github_template_iphone7.webp
-index.html
-index_list.py
-lib_img.csv
