@@ -4,8 +4,9 @@
 + Add SSD1306 display Shutdown Function, Avoid Screen Burn-in
 - Delete FullSpeed Function
 ```
-### PCB Design
-[Gerber Archive](https://github.takahashi65.info/lib_circuit/gerber_arduino_2_pwm.zip)
+### PCB Design and BOM
+* [Bill of materials](https://github.com/Suzhou65/Suzhou65.github.io/blob/master/lib_circuit/bom_arduino_2_pwm_thermostat.md)
+* [Gerber](https://github.com/Suzhou65/Suzhou65.github.io/raw/master/lib_circuit/gerber_arduino_2_pwm.zip)
 ### Arduino Code
 ```c++
 // Libraries
@@ -29,7 +30,7 @@ const int PWMoutput = 10;
 unsigned long previousTimePWM = millis();
 long timeIntervalPWM = 500;
 int TemputreRead, PWMConfig;
-// Task, RPM
+// MultuTask, RPM
 unsigned long previousTimeRPM = millis();
 long timeIntervalRPM = 1000;
 #define AntiBounce 10
@@ -40,7 +41,8 @@ int CurrentSpeed;
 unsigned long previousTimeDISP = millis();
 long timeIntervalDISP = 1000;
 // Text
-String PrintOut, TextSep, PrefixTemperature, PrefixPWM, PrefixRPM, String1, String2, String3;
+String PrintOut, TextSep, PrefixTemperature, PrefixPWM, PrefixRPM;
+String String1, String2, String3;
 
 // Config
 void setup(){
