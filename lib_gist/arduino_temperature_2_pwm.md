@@ -1,6 +1,7 @@
 ## Arduino Nano based temperature control PWM Fan
 ### Change
 ```diff
++ Add some Curve-like PWM Configuration
 + Add SSD1306 display Shutdown Function, Avoid Screen Burn-in
 - Delete FullSpeed Function
 ```
@@ -28,12 +29,13 @@ const int SPST = 4;
 const int PWMoutput = 10;
 // MultuTask, PWM
 unsigned long previousTimePWM = millis();
-long timeIntervalPWM = 500;
-int TemputreRead, PWMConfig;
-// MultuTask, RPM
+long timeIntervalPWM = 250;
+float TemputreRead, PWMSignal;
+int PWMConfig;
+// Task, RPM
 unsigned long previousTimeRPM = millis();
 long timeIntervalRPM = 1000;
-#define AntiBounce 10
+#define AntiBounce 5
 #define FanIsStuck 500
 unsigned long volatile ts1=0, ts2=0;
 int CurrentSpeed;
@@ -96,7 +98,7 @@ void loop(){
   if (currentTime - previousTimeDISP > timeIntervalDISP){
     previousTimeDISP = currentTime;
     // Serial Text
-    PrintOut = TemputreRead + TextSep + PWMConfig + TextSep + CurrentSpeed;
+    PrintOut = String(TemputreRead)+TextSep+String(PWMConfig)+TextSep+String(CurrentSpeed);
     // Display Function Enable
     if (digitalRead(SPST) == LOW){
       // Serial
@@ -106,19 +108,19 @@ void loop(){
       display.setTextSize(1);
       display.setTextColor(WHITE);
       display.setCursor(10,10);
-      String1 = PrefixTemperature + TemputreRead;
+      String1 = PrefixTemperature+String(TemputreRead);
       display.println(String1);
       // String 2
       display.setTextSize(1);
       display.setTextColor(WHITE);
       display.setCursor(10,32);
-      String2 = PrefixPWM + PWMConfig;
+      String2 = PrefixPWM+String(PWMConfig);
       display.println(String2);
       // String 3
       display.setTextSize(1);
       display.setTextColor(WHITE);
       display.setCursor(10,52);
-      String3 = PrefixRPM + CurrentSpeed;
+      String3 = PrefixRPM+String(CurrentSpeed);
       display.println(String3);
       // Display
       display.display();     
@@ -142,13 +144,12 @@ void setupTimer1(){
   OCR1B = 0;
 }
 // PWN Output
-void setPWM1B(float f){
-  f=f<0?0:f>1?1:f;
-  OCR1B = (uint16_t)(320*f);
-  PWMConfig = 100*(f);
+void setPWM1B(float PWMSignal){
+  PWMSignal=PWMSignal<0?0:PWMSignal>1?1:PWMSignal;
+  OCR1B = (uint16_t)(320*PWMSignal);
+  PWMConfig = 100*(PWMSignal);
   return;
 }
-
 // Interrupt handler
 void TachISR(){
   unsigned long m=millis();
@@ -167,26 +168,27 @@ unsigned long CalcRPM(){
     return CurrentSpeed;  
   }
 }
-
 // Thermostat
 void Temperature2PWM(int TemputreRead){
   if (TemputreRead>=21 && TemputreRead<=25){
-    setPWM1B(0.50f);
+    PWMSignal = (TemputreRead*1.4)/100;
+    setPWM1B(PWMSignal);
     return;
   } else if (TemputreRead>=26 && TemputreRead<=30){
-    setPWM1B(0.55f);
+    PWMSignal = (TemputreRead*1.6)/100;
+    setPWM1B(PWMSignal);
     return;
   } else if (TemputreRead>=31 && TemputreRead<=35){
-    setPWM1B(0.65f);
+    PWMSignal = (TemputreRead*1.8)/100;
+    setPWM1B(PWMSignal);
     return;
-  } else if (TemputreRead>=36 && TemputreRead<=40){
-    setPWM1B(0.80f);
-    return;
-  } else if (TemputreRead>=46 && TemputreRead<=50){
-    setPWM1B(1.00f);
+  } else if (TemputreRead>=36 && TemputreRead<=45){
+    PWMSignal = (TemputreRead*2.0)/100;
+    setPWM1B(PWMSignal);
     return;
   } else {
-    setPWM1B(0.75f);
+    PWMSignal = 0.75;
+    setPWM1B(PWMSignal);
     return;
   }
 }
