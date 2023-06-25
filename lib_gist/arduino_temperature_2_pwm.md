@@ -32,6 +32,10 @@ unsigned long previousTimePWM = millis();
 long timeIntervalPWM = 250;
 float TemputreRead, PWMSignal;
 int PWMConfig;
+// Curve
+float P1 =  0.144;
+float P2 =  0.028;
+float P3 = 17.500;
 // Task, RPM
 unsigned long previousTimeRPM = millis();
 long timeIntervalRPM = 1000;
@@ -170,24 +174,13 @@ unsigned long CalcRPM(){
 }
 // Thermostat
 void Temperature2PWM(int TemputreRead){
-  if (TemputreRead>=21 && TemputreRead<=25){
-    PWMSignal = (TemputreRead*1.4)/100;
+  if (TemputreRead>=15 && TemputreRead<=60){
+    // Curve
+    PWMSignal = ((TemputreRead * P1)*(TemputreRead * P1)) + (TemputreRead * P2) + P3;
     setPWM1B(PWMSignal);
-    return;
-  } else if (TemputreRead>=26 && TemputreRead<=30){
-    PWMSignal = (TemputreRead*1.6)/100;
-    setPWM1B(PWMSignal);
-    return;
-  } else if (TemputreRead>=31 && TemputreRead<=35){
-    PWMSignal = (TemputreRead*1.8)/100;
-    setPWM1B(PWMSignal);
-    return;
-  } else if (TemputreRead>=36 && TemputreRead<=45){
-    PWMSignal = (TemputreRead*2.0)/100;
-    setPWM1B(PWMSignal);
-    return;
   } else {
-    PWMSignal = 0.75;
+    // Default
+    PWMSignal = 0.70;
     setPWM1B(PWMSignal);
     return;
   }
