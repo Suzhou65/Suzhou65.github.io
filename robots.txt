@@ -1,19 +1,16 @@
 User-agent: *
 Allow: /index.html
 Allow: /lib_circuit/
-Allow: /lib_css/
+Allow: /lib_doc/
 Allow: /lib_gist/
 Allow: /lib_gpx/
 Allow: /lib_img/
-Allow: /lib_js/
 Allow: /lib_list/
-Allow: /lib_shell/
 Allow: /page/contributions.html
 Allow: /page/interest.html
+Disallow: /lib_css/
 Disallow: /lib_badge/
-Disallow: /lib_doc/
+Disallow: /lib_js/
+Disallow: /lib_shell/
 
-Sitemap: https://takahashi65.info/sitemap.xml
-Sitemap: https://blog.takahashi65.info/sitemap.xml
 Sitemap: https://github.takahashi65.info/sitemap.xml
-Sitemap: https://homekit.takahashi65.info/sitemap.xml
