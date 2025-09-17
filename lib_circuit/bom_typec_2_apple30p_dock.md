@@ -1,6 +1,7 @@
 # USB Type-C to Apple retro 30-pin
 ```diff
 + Last Update: 2022.06.30
+- Signal integrity issues spotted, building is not advised.
 ```
 
 ## Circuit diagram
