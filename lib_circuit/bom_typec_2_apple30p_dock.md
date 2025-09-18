@@ -1,8 +1,11 @@
 # USB Type-C to Apple retro 30-pin
 ```diff
-+ Last Update: 2022.06.30
++ Last Update: 2025.09.18
 - Signal integrity issues spotted, building is not advised.
+- Interface board version under development.
 ```
+![](https://github.takahashi65.info/lib_img/github_gerber_30pininterfaceboard_dock.webp)
+Interface board version rendering image.
 
 ## Circuit diagram
 ![](https://github.takahashi65.info/lib_img/github_gerber_usbc2apple_schematic.webp)
