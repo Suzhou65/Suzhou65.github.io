@@ -9,7 +9,7 @@
     h4{font-size:1.06rem; font-weight:500; color:#393939; font-family:"Futura",Helvetica;}
     h1, h2, h3, h4{margin:0 0 1.125rem; line-height:1.1;}
     /* Link */
-    a{text-decoration:none; color:#3399CC; font-weight:500;}
+    a{text-decoration:none; color:#3399CC; font-weight:500;z-index:2;}
     /* Font */
     small{font-size:0.85rem;font-weight:600;}
     a small{font-size:0.75rem; color:#777777; margin-top:-0.3em; display:block; font-weight:500;}
@@ -19,7 +19,7 @@
     /* Frame Container */
     .wrapper{max-width:73.75rem; margin:0 auto;}
     /* Left Frame */
-    header{width:16.875rem; float:left; position:fixed;}
+    header{width:16.875rem; float:left; position:fixed;z-index:0;}
     /* Left Header */
     header ul{list-style:none; width:16.875rem; height:2.5rem; padding:0; background:#F4F4F4; border-radius:0.313rem; border:0.063rem solid #E0E0E0;}
     header li{width:5.563rem; height:2.5rem; float:left; border-right:0.063rem solid #E0E0E0;}
@@ -29,7 +29,7 @@
     /* Left Bottom */
     footer{width:16.875rem; float:left; position:fixed; bottom:3.125rem; font-size:0.85rem;}
     /* Right Frame */
-    section{width:51.875rem; float:right; padding-bottom:3.125rem;}
+    section{width:51.875rem; float:right; padding-bottom:3.125rem;position:relative;;z-index:1;}
     /* Table */
     table{width:100%; border-collapse:collapse;}
     /* Table Header */
