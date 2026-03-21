@@ -3,86 +3,107 @@ Convert Pixmicat! log file into CSV format.
 ### Import Module
 ```python
 # -*- coding: utf-8 -*-
-import sys
-import subprocess
+import logging
+import pathlib
 import pandas
 ```
-### FileName matchimg
+### Runtime
 ```python
-# Using ls command get list output 
-def AskList(FolderDirectory=None):
-    # Ask list
-    if FolderDirectory is None:
-        ListAsking = subprocess.Popen(["ls","-ls"],stdout=subprocess.PIPE)
-    elif FolderDirectory is not None:
-        ListAsking = subprocess.Popen(["ls","-ls",FolderDirectory],stdout=subprocess.PIPE)
-    # AWK filter
-    AWKFilter = ["awk","{print $10}"]
-    FilterOutput = subprocess.Popen(AWKFilter,stdin=ListAsking.stdout,stdout=subprocess.PIPE)
-    # Dump into cache
-    BytesResult = FilterOutput.communicate()[0]
-    # Decode
-    DecodeResult = BytesResult.decode("utf-8")
-    # Listing
-    ListResult = DecodeResult.split("\n")
-    # Remove unmatch
-    MatchFile = filter(FileCheck,ListResult)
-    # Get
-    return list(MatchFile)
-
-# Check file name
-def FileCheck(ListResult):
-    # String "pixmicat_log" setting as you logfile configuration.
-    if ListResult.find("audit") != (-1):
-        return True 
-    elif ListResult.find("audit") == (-1):
-        return False
-```
-### Log2CSV
-```python
-# Pixmicat Log2CSV
-def Log2CSV(Files,FolderDirectory=None):
-    # Trans to pandas dataframe
-    try:
-        # Header 'E-Series' is contain extra
-        HeaderConfig = ["IP","TIME","ACTION","CONTENT","E1","E2","E3","E4","E5","E6","E7","E8","E9","E10","E11","EX12"]
-        # Path
-        if FolderDirectory is None:
-            pass
-        elif FolderDirectory is not None:
-            Files = FolderDirectory + "/" + Files
-        # Read file
-        FileCache = pandas.read_csv(Files,encoding="utf-8",header=None,sep=("[\\[\\]]"),names=HeaderConfig,engine="python")
-        # Merge
-        FileCache["CONTENTS"] = FileCache[FileCache.columns[3:]].apply(lambda x: " ".join(x.dropna().astype(str)), axis=1)
-        # Drop
-        FileCache= FileCache.drop(columns=["CONTENT","E1","E2","E3","E4","E5","E6","E7","E8","E9","E10","E11","EX12"])
-        # Reanme file
-        if Files.endswith("txt"):
-            OutputFilename = Files.replace("ht","").replace("_audit","").replace(".txt",".csv")
-        else:
-            OutputFilename = Files.replace("ht","").replace("_audit","")+ (".csv")
-        # Save. Using 'utf_8_sig' if you want to using Excel import data from a text file function.
-        FileCache.to_csv(OutputFilename, encoding="utf_8_sig", index=False)
-        # Print Info when translation complete
-        print(f"File output: {OutputFilename}")
-    # Error handling
-    except Exception as ErrorStatus:
-        print(f"Error status: {ErrorStatus}")
-```
-### Using
-```python
-# Runtime
-try:
-    FolderDirectory="/path/pixmicat_log"
-    ReadyInput = AskList(FolderDirectory)
-    # Running convert
-    for Files in ReadyInput:
-        Log2CSV(Files,FolderDirectory)
-    # End loop
-    sys.exit(0)
 # Error handling
-except Exception as ErrorStatus:
-    print(ErrorStatus)
-    sys.exit(0)
+log2CsvEv = logging.getLogger(__name__)
+
+# Reading dictionary
+class Runtime():
+    # Path and Pandas table element
+    def __init__(self):
+        try:
+            # Header 'E-Series' is contain extra
+            self.Header = [
+                "IP","TIME","ACTION","CONTENT",
+                "E1","E2","E3","E4","E5","E6","E7","E8","E9","E10","E11","EX12"]
+            # Drop element
+            self.Drop = [
+                "E1","E2","E3","E4","E5","E6","E7","E8","E9","E10","E11","EX12"]
+            # Default path
+            self.LocalFolder = pathlib.Path.cwd()
+        except Exception as ConfigurationError:
+            log2CsvEv.exception(ConfigurationError)
+            raise
+        # 2026C21
+
+    # Get file list inside directory
+    def GetFileList(self, FolderDirectory=None, Extensions=None):
+        try:
+            # Get folder directory
+            if FolderDirectory is None:
+                TargetDirectory = self.LocalFolder
+            else:
+                TargetDirectory = pathlib.Path(FolderDirectory)
+            # Check
+            if not TargetDirectory.exists():
+                raise FileNotFoundError(f"Directory {TargetDirectory} not exists")
+            if not TargetDirectory.is_dir():
+                raise NotADirectoryError(f"{TargetDirectory} isn't a directory")
+            # Extensions filter disable
+            if Extensions is None:
+                DirectoryItemList = TargetDirectory.glob("*")
+                return list(DirectoryItemList)
+            # Extensions filter enable
+            elif isinstance(Extensions,str):
+                Extensions = [Extensions]
+            elif isinstance(Extensions,list):
+                pass
+            # Extensions type error
+            elif not isinstance(Extensions,(str,list)):
+                raise TypeError
+            ExtensionsList = [f".{Ext.lstrip('.')}" for Ext in Extensions]
+            FileList = []
+            for Ext in ExtensionsList:
+                FileList.extend(TargetDirectory.glob(f"*{Ext}"))
+            return FileList
+        except Exception as GetFileListError:
+            log2CsvEv.exception(GetFileListError)
+            raise
+        # 2026C21
+
+    # Translate logfile into CSV
+    def L0g2CSV(self, Files):
+        try:
+            LogFile = pathlib.Path(Files)
+            # Read file
+            FileCache = pandas.read_csv(
+                LogFile,encoding="utf-8",engine="python", 
+                header=None,sep=("[\\[\\]]"),names=self.Header)
+            # Merge
+            FileCache["CONTENTS"] = FileCache[FileCache.columns[3:]].apply(lambda x: " ".join(x.dropna().astype(str)), axis=1)
+            # Drop
+            FileCache= FileCache.drop(columns=self.Drop)
+            # Reanme file
+            OutputDirectoryundFilename = Files.with_suffix('')
+            OutputPath = pathlib.Path(f"{OutputDirectoryundFilename}.csv")
+            # Save. Using 'utf_8_sig' if you want to using Excel import data from a text file function.
+            FileCache.to_csv(OutputPath,encoding="utf_8_sig",index=False)
+            return(str(OutputPath))
+        except Exception as L0g2CSVError:
+            log2CsvEv.exception(L0g2CSVError)
+            raise
+        # 2026C21
+```
+### Script
+```python
+# -*- coding: utf-8 -*-
+import logging
+import log2csv
+
+# Log
+FORMAT = "%(asctime)s |%(levelname)s |%(message)s"
+logging.basicConfig(level=logging.WARNING,filename="log2csv.log",filemode="a",format=FORMAT)
+
+# Runtime
+Pixmicat = log2csv.Runtime()
+FileList = Pixmicat.GetFileList(Extensions="audit")
+# Procress
+for File in FileList:
+    Result = Pixmicat.L0g2CSV(File)
+    print(f"Output: {Result}")
 ```
